@@ -1,10 +1,10 @@
 # Galactic Battles
 
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1229018a-c614-44e4-89fe-c0fe18f6f437" />
-
 [Game website](https://blasterworld.alexkach99.workers.dev/profile_)
 
 This is multiplayer 2D space shooter made with JavaScript. Currently there is only web version for PC.
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1229018a-c614-44e4-89fe-c0fe18f6f437" />
 
 In this game almost all of the textures are procedurally generated, including those of: space background with stars and nebulae; planets; main star in the star system; spaceships; equipment (weapons, engines and repair robots).
 

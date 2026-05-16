@@ -4,7 +4,7 @@
 
 This is multiplayer 2D space shooter made with JavaScript. Currently there is only web version for PC.
 
-<img width="1920" height="967" alt="image" src="https://github.com/user-attachments/assets/95c21d69-4188-40f8-adad-aa8b1e2cdde2" />
+<img width="1920" height="923" alt="image" src="https://github.com/user-attachments/assets/29ac1b1a-963d-4cc5-be14-5164532fc676" />
 
 In this game almost all of the textures are procedurally generated, including those of: space background with stars and nebulae; planets; main star in the star system; spaceships; equipment (weapons, engines and repair robots).
 

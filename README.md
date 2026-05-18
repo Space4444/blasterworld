@@ -1,6 +1,6 @@
 # Galactic Battles
 
-[Game website](https://blasterworld.alexkach99.workers.dev/profile_)
+[Game website](https://blasterworld.alexkach99.workers.dev)
 
 This is multiplayer 2D space shooter made with JavaScript. Currently there is only web version for PC.
 

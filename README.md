@@ -6,7 +6,7 @@ This is multiplayer 2D space shooter made with JavaScript. Currently there is on
 
 <img width="1280" height="617" alt="image" src="https://github.com/user-attachments/assets/d8707f84-4e3e-4987-8c7b-1cd90a850cb8" />
 
-In this game almost all of the textures are procedurally generated, including those of: space background with stars and nebulae; planets; main star in the star system; spaceships; equipment (weapons, engines and repair robots).
+In this game almost all of the textures are procedurally generated, including space background with stars and nebulae, planets, main star in the star system, spaceships and equipment (weapons, engines and repair robots).
 
 Players can battle with each other or with NPC. There are infinite number of different NPC enemy spaceships. The more far away you are from the space station, the stronger are NPC around you. NPC can drop parts of equipment that you can use to craft new equipment at the space station. There are also infinite number of equipment with different sprites. Also you can earn money by killing enemies or selling items and use that money to buy new ships.
 

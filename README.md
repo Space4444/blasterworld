@@ -24,6 +24,7 @@ This is multiplayer 2D space shooter made with JavaScript. Currently there is on
 - [React](https://react.dev/)
 - [Ant Design](https://ant.design/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [GLSL Shaders](https://developer.mozilla.org/ru/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)
 
 ## Background
 

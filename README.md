@@ -9,7 +9,6 @@ This is multiplayer 2D space shooter made with JavaScript. Currently there is on
 ## [Game website](https://blasterworld.alexkach99.workers.dev)
 
 ## Features
-
 - Multiplayer
 - Procedural generation of game textures
 - Crafting and upgrade system
@@ -17,7 +16,6 @@ This is multiplayer 2D space shooter made with JavaScript. Currently there is on
 - Registration via email and social media
 
 ## Tech stack
-
 - [Cloudflare Workers](https://developers.cloudflare.com/workers/)
 - [D1](https://developers.cloudflare.com/d1/)
 - [Hono](https://hono.dev/)

@@ -22,6 +22,7 @@ This is multiplayer 2D space shooter made with JavaScript. Currently there is on
 - [Better Auth](https://better-auth.com/)
 - [PIXI.js](https://pixijs.com/)
 - [React](https://react.dev/)
+- [Vite](https://vite.dev/)
 - [Ant Design](https://ant.design/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [GLSL Shaders](https://developer.mozilla.org/ru/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)

@@ -154,5 +154,7 @@ export default function Guest() {
             <h1 className="text-5xl">Your ship was destroyed...</h1>
             <button id ="respawn-button" className = "game-button">respawn</button>
         </div>
+
+        <div id='socket-status' className='text-3xl text-center'></div>
     </div>);
 };

@@ -47,6 +47,16 @@ body
 	z-index: 2;
 	transform: translate(-50%, 0);
 }
+#socket-status
+{
+	color: rgba(200, 32, 16, 1);;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	z-index: 2;
+	transform: translate(-50%, 0);
+	pointer-events: none;
+}
 #respawn-button
 {
 	font-size: 32px;

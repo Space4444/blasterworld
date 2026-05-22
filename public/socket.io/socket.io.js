@@ -4,11 +4,20 @@ class ReconnectingWebSocket {
         this.socket = null;
         this.reconnectAttempts = 0;
         this.maxReconnectAttempts = 40;
-        this.status = false;
+        this._status = '';
 
         this.callbacks = new Map();
         
         this.connect(5000);
+    }
+
+    get status() {
+        return this._status;
+    }
+
+    set status(value) {
+        document.getElementById('socket-status').innerText = value;
+        this._status = value;
     }
 
     connect(timeout) {
@@ -58,10 +67,10 @@ class ReconnectingWebSocket {
     handleReconnect() {
         if (this.reconnectAttempts >= this.maxReconnectAttempts) {
             console.log('Max reconnect attempts reached. Giving up.');
-            this.status = 'disconnected from the server';
+            this.status = 'Disconnected from the server';
             return;
         }
-        this.status = 'disconnected from the server, reconnecting...';
+        this.status = 'Disconnected from the server, reconnecting...';
         const delay = Math.min(250 * Math.pow(2, this.reconnectAttempts), 2500);
         this.reconnectAttempts++;
         console.log(`Reconnecting in ${delay / 1000} seconds... (Attempt ${this.reconnectAttempts})`);

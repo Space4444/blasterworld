@@ -7,7 +7,10 @@ class Item {
 
 		Item.list[ID] = this;
 
-		setTimeout(() => this.collect(), Item.LIFE_TIME);
+		setTimeout(() => {
+            this.collect();
+            io.emit('collect', {'item': {'ID': this.ID} } );
+        }, Item.LIFE_TIME);
 	}
 
 	collect() {

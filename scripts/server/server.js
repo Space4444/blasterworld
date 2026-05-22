@@ -315,7 +315,10 @@ export class WebSocketServer extends DurableObject {
             callbacks: new Map()
         };
         socket.on = (label, callback) => socket.callbacks.set(label, callback);
-        socket.once = (label, callback) => socket.callbacks.set(label, callback);
+        socket.once = (label, callback) => socket.callbacks.set(label, data => {
+            callback(data);
+            socket.callbacks.delete(label);
+        });
         socket.emit = (label, message) => this.socketEmit(socket, label, message);
         socket.disconnect = () => this.handleConnectionClose(socket);
         socket.broadcast = {

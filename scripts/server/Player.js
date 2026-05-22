@@ -183,6 +183,7 @@ class Player extends Controller {
 
         if (p !== this && p.u_ID === this.u_ID) {
             prevPlayer = p;
+            p.socket.emit('multilogin');
             p.socket.disconnect();
             break;
         }

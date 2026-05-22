@@ -4,9 +4,9 @@ ldb.get      = ldb['get'];
 const $      = window['$'];
 
 const socket = window['io']();
-socket.on    = socket['on'];
-socket.once  = socket['once'];
-socket.emit  = socket['emit'];
+socket.on('multilogin', () => {
+    socket.reconnectAttempts = socket.maxReconnectAttempts;
+});
 const UDPsocket = socket;
 
 const chat            = document.getElementById("chat");
@@ -304,8 +304,7 @@ function mainLoop() {
   input ping:  ${inputPing.value.toFixed()} ms
   tcp ping: ${tcpPing.value.toFixed()} ms
   ${Player.count} player${(Player.count === 1 ? ' ' : 's ')}on the server
-  money: $${player.money}
-  ${socket.status}`;
+  money: $${player.money}`;
 }
 
 function update() {

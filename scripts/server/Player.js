@@ -843,7 +843,7 @@ class Player extends Controller {
     new WebRTC(socket, player);
 
     player.initVisibleLists();
-    Player.addToVisibleLists(player.body);
+    // Player.addToVisibleLists(player.body);
 
     player.authenticate(data['u_id'], socket);
 

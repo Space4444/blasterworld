@@ -80,14 +80,14 @@ export default function Client() {
                     <Link to="/signup_"><Button type="primary" className="m-1">Sign up</Button></Link>
                     <br/>
                     <Button
-                        icon={<GoogleCircleFilled />} 
+                        icon={<GoogleCircleFilled />}
                         onClick={e => socialLogin('google', e)}
                     >
                         Sign in with Google
                     </Button>
                     <br/>
                     <Button
-                        icon={<GithubOutlined />} 
+                        icon={<GithubOutlined />}
                         onClick={e => socialLogin('github', e)}
                     >
                         Sign in with Github

@@ -3,7 +3,7 @@ class ReconnectingWebSocket {
         this.url = url;
         this.socket = null;
         this.reconnectAttempts = 0;
-        this.maxReconnectAttempts = 20;
+        this.maxReconnectAttempts = 40;
         this.status = false;
 
         this.callbacks = new Map();
@@ -62,7 +62,7 @@ class ReconnectingWebSocket {
             return;
         }
         this.status = 'disconnected from the server, reconnecting...';
-        const delay = Math.min(250 * Math.pow(2, this.reconnectAttempts), 10000);
+        const delay = Math.min(250 * Math.pow(2, this.reconnectAttempts), 2500);
         this.reconnectAttempts++;
         console.log(`Reconnecting in ${delay / 1000} seconds... (Attempt ${this.reconnectAttempts})`);
         setTimeout(() => this.connect(delay), delay);

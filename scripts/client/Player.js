@@ -173,13 +173,17 @@ class Player extends Controller {
 
   static takeOff(data) {
     if (!data) {
-        player.startTakingOff();
+        if (player.orb) player.startTakingOff();
         return;
     }
 
     var p = Player.list[data['player']['controller']['ID']];
     if (!p) {
       p = new Player(data['player'], images.player, images.playerBullet, images.trail, shipExp);
+      p.setLanded(data['orb']);
+    }
+
+    if (!p.orb) {
       p.setLanded(data['orb']);
     }
 

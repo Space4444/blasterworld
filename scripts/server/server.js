@@ -93,15 +93,14 @@ Math.TWO_PI = Math.PI * 2;
 Math.HALF_PI = Math.PI * 0.5;
 
 const seed = 200;
-const rand = new Random(seed);
 // const DEBUG = port != process.env.PORT;
-const pendingCandidates = [];
-const dataChannelSettings = {
-  'udp': {
-    ordered: false,
-    maxRetransmits: 0
-  }
-};
+// const pendingCandidates = [];
+// const dataChannelSettings = {
+//   'udp': {
+//     ordered: false,
+//     maxRetransmits: 0
+//   }
+// };
 
 // io.on('connection', socket => {
 //   console.log(`connected with transport ${socket.conn.transport.name}, id: ${socket.id}`);
@@ -240,7 +239,7 @@ app.basePath('/api').route('/', router);
 
 import { DurableObject } from 'cloudflare:workers';
 
-var io;
+var io, rand;
 export default {
     async fetch(request, env, ctx) {
         console.log('fetch', request.url);
@@ -276,6 +275,7 @@ export class WebSocketServer extends DurableObject {
         console.log('DurableObject constructor');
         super(ctx, env);
         this.sockets = new Map();
+        rand = new Random(seed);
         Universe.start();
         Controller.setIntervals();
         console.log('started');
@@ -418,9 +418,12 @@ export class WebSocketServer extends DurableObject {
     }
 
     saveState() {
-        console.log('saving:', JSON.stringify(this.state));
+        for (const id in this.state.players) {
+            if ( !this.sockets.has(id) ) {
+                delete this.state.players[id];
+            }
+        }
         this.ctx.storage.put('state', this.state);
-        console.log('saved');
     }
 }
 
